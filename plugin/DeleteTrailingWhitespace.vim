@@ -43,14 +43,6 @@ endif
 
 
 
-"- autocmds --------------------------------------------------------------------
-
-augroup DeleteTrailingWhitespace
-    autocmd!
-    autocmd BufWritePre * try | call DeleteTrailingWhitespace#InterceptWrite() | catch /^DeleteTrailingWhitespace:/ | echoerr substitute(v:exception, '^\CDeleteTrailingWhitespace:\s*', '', '') | endtry
-augroup END
-
-
 "- commands --------------------------------------------------------------------
 
 function! s:Before()
